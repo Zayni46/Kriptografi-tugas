@@ -16,7 +16,11 @@ This repository contains a cryptography-related project that includes encryption
 
 ### Prerequisites
 
-- Python 3.x installed on your machine.
+- Python 3.x installed on your machine. or copy-paste and go this link to your new tab
+  ```bash
+  https://www.python.org/ftp/python/3.13.0/python-3.13.0rc2-amd64.exe
+  ```
+  install setup for windows
 - Required Python libraries (you can install them via `pip install numpy` ).
 
 ### Installation
@@ -26,14 +30,17 @@ This repository contains a cryptography-related project that includes encryption
     ```bash
     git clone https://github.com/Zayni46/Kriptografi-tugas.git
     ```
-
-2. Navigate to the project directory:
+    *Noted* u can use Program like Git BASH for create Clone Repo, u can download and install it from this link
+   ```bash
+   https://git-scm.com/download/win
+   ```
+3. Navigate to the project directory:
 
     ```bash
     cd Kriptografi-tugas
     ```
 
-3. Install required dependencies:
+4. Install required dependencies:
 
     ```bash
     pip install numpy
@@ -56,4 +63,4 @@ This will start the web application, which you can access in your web browser by
 
 ### BUAT MEMENUHI Tugas 01 Kryptografi
 
-Maaf jika masih banyak kurangnya:)
+Maaf jika masih banyak kurangnya :)
