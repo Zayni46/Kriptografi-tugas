@@ -54,6 +54,6 @@ This will start the web application, which you can access in your web browser by
 - **Encryption/Decryption**: The project allows you to encrypt and decrypt text using algorithms implemented in `ciphers.py`.
 - **Web Interface**: The application features a simple web interface where users can input plaintext and get the encrypted result, or vice versa.
 
-### License
+### BUAT MEMENUHI Tugas 01 Kryptografi
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Maaf jika masih banyak kurangnya:)
