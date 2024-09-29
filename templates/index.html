@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriptografi Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Program Kriptografi</h1>
+        <p>Silakan pilih cipher, masukkan teks atau unggah file, dan pilih untuk enkripsi atau dekripsi.</p>
+
+        <form method="POST" action="/encrypt" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="plaintext">Pesan (Plainteks) atau Unggah File:</label>
+                <textarea id="plaintext" name="plaintext" rows="4" placeholder="Masukkan teks di sini..."></textarea>
+                <input type="file" id="fileInput" name="fileInput" accept=".txt">
+            </div>
+            <div class="form-group">
+                <label for="key">Kunci:</label>
+                <input type="text" id="key" name="key" placeholder="Masukkan kunci">
+            </div>
+            <div class="form-group">
+                <label for="cipher">Pilih Cipher:</label>
+                <select id="cipher" name="cipher">
+                    <option value="vigenere">Vigenere Cipher</option>
+                    <option value="auto_key_vigenere">Auto-Key Vigenere Cipher</option>
+                    <option value="playfair">Playfair Cipher</option>
+                    <option value="hill">Hill Cipher</option>
+                    <option value="super">Super Enkripsi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enkripsi</button>
+            </div>
+        </form>
+
+        <form method="POST" action="/decrypt" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="ciphertext">Cipherteks atau Unggah File:</label>
+                <textarea id="ciphertext" name="ciphertext" rows="4" placeholder="Masukkan cipherteks di sini..."></textarea>
+                <input type="file" id="fileCipherInput" name="fileCipherInput" accept=".txt, .bin">
+            </div>
+            <div class="form-group">
+                <label for="key">Kunci:</label>
+                <input type="text" id="key" name="key" placeholder="Masukkan kunci">
+            </div>
+            <div class="form-group">
+                <label for="cipher">Pilih Cipher:</label>
+                <select id="cipher" name="cipher">
+                    <option value="vigenere">Vigenere Cipher</option>
+                    <option value="auto_key_vigenere">Auto-Key Vigenere Cipher</option>
+                    <option value="playfair">Playfair Cipher</option>
+                    <option value="hill">Hill Cipher</option>
+                    <option value="super">Super Enkripsi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Dekripsi</button>
+            </div>
+        </form>
+
+        <div class="result">
+            <h2>Hasil:</h2>
+            <p id="resultText">{{ result }}</p>
+            
+            <!-- Tombol Download -->
+            <a id="downloadButton" style="display: none;" download="cipherteks.txt">
+                <button type="button">Download Hasil</button>
+            </a>
+            
+        </div>
+        
+        <!-- Script untuk membuat tombol download aktif ketika ada hasil -->
+        <script>
+            // Script untuk mengubah hasil menjadi file dan mengaktifkan tombol download
+            const resultText = "{{ result }}"; // Hasil enkripsi/dekripsi dari backend
+        
+            if (resultText) {
+                const downloadButton = document.getElementById('downloadButton');
+                const blob = new Blob([resultText], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                
+                // Menghubungkan blob ke link download
+                downloadButton.href = url;
+                downloadButton.style.display = 'inline'; // Tampilkan tombol download
+            }
+        </script>
+        <br/><br/><br/><h1>Made by Zayni</h1>
+    </div>
+</body>
+</html>
