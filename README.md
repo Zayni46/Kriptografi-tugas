@@ -25,7 +25,7 @@ This repository contains a cryptography-related project that includes encryption
 
 ### Installation
 
-*Noted* u can use Program like Git BASH for create Clone Repository from No.1, u can download and install it from this link:
+*Noted* u can use Program like Git BASH for Clone Repository from No.1 *Below*, u can download and install it from this link:
    ```bash
    https://git-scm.com/download/win
    ```
