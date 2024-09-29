@@ -36,7 +36,7 @@ This repository contains a cryptography-related project that includes encryption
 3. Install required dependencies:
 
     ```bash
-    pip install -r requirements.txt
+    pip install numpy
     ```
 
 ### Running the Application
