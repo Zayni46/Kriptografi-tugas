@@ -25,22 +25,23 @@ This repository contains a cryptography-related project that includes encryption
 
 ### Installation
 
+*Noted* u can use Program like Git BASH for create Clone Repository from No.1, u can download and install it from this link:
+   ```bash
+   https://git-scm.com/download/win
+   ```
 1. Clone this repository to your local machine using the following command:
 
     ```bash
     git clone https://github.com/Zayni46/Kriptografi-tugas.git
     ```
-    *Noted* u can use Program like Git BASH for create Clone Repo, u can download and install it from this link
-   ```bash
-   https://git-scm.com/download/win
-   ```
-3. Navigate to the project directory:
+
+2. Navigate to the project directory:
 
     ```bash
     cd Kriptografi-tugas
     ```
 
-4. Install required dependencies:
+3. Install required dependencies:
 
     ```bash
     pip install numpy
