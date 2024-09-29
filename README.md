@@ -17,7 +17,7 @@ This repository contains a cryptography-related project that includes encryption
 ### Prerequisites
 
 - Python 3.x installed on your machine.
-- Required Python libraries (you can install them via `pip` if `requirements.txt` is available).
+- Required Python libraries (you can install them via `pip install numpy` ).
 
 ### Installation
 
